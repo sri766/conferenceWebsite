@@ -4,10 +4,10 @@ const FooterMain = (props) => {
   // console.log(props.footerData[0].content)
   const footerData=props.footerData;
   return (
-    <div className='mt-16 lg:ml-64'>
+    <div className='mt-16'>
      <Footer bgDark={true}>
-  <div className="w-full bg-footerblue text-white rounded-lg">
-    <div className="grid w-full grid-cols-2 gap-8 pt-8 px-6 md:grid-cols-4 text-white">
+  <div className="w-full bg-footermain text-white">
+    <div className="grid w-full grid-cols-2 gap-8 pt-8 px-6 md:grid-cols-4  text-white">
 
       {footerData.map((currFooter,ind)=>
         
@@ -41,7 +41,7 @@ const FooterMain = (props) => {
 
      
     </div>
-    <div className="w-full bg-footerblue text-white  py- px-4 sm:flex sm:items-center sm:justify-center">
+    <div className="w-full bg-footermain text-white  py- px-4 sm:flex sm:items-center sm:justify-center">
       <Footer.Copyright
         href="#"
         by="IPDIMS™"

@@ -3,10 +3,10 @@ import { Card } from 'flowbite-react'
 const ImportantDates = (props) => {
   return (
     <div className=''>
-        <div className="">
+        <div className="hover:absolute z-20 ">
   <Card style={{height:"430px"}} className='relative hover:scale-105 hover:shadow-2xl hover:bg-gray-200 drop-shadow-xl '>
     <div className="absolute top-6 self-center mb-4 flex items-center justify-center">
-      <h5 className="text-xl font-semibold leading-none text-footerblue dark:text-white">
+      <h5 className="text-xl font-textFont font-semibold leading-none text-textmain dark:text-white">
         {props.title}
       </h5>
     </div>
@@ -15,9 +15,9 @@ const ImportantDates = (props) => {
 
         {props.importantDatesData.map((currDate,index)=>
           <li key={index} className="py-3 sm:py-4">
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-4 font-textFont">
             <div className="min-w-0 flex-1">
-              <p className="truncate text-lg     font-medium  text-gray-900 dark:text-white">
+              <p className="truncate text-lg font-medium  text-gray-900 dark:text-white">
               {currDate.title}
               </p>
               <p className="truncate text-sm text-gray-500 dark:text-gray-400">
@@ -30,11 +30,7 @@ const ImportantDates = (props) => {
           </div>
         </li>)}
 
-        
 
-
-
-        
         
       </ul>
     </div>

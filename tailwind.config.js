@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const plugin = require('tailwindcss/plugin')
+
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx,html}",
@@ -8,7 +10,9 @@ module.exports = {
     'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}'  
   ],
   theme: {
-   
+    fontFamily: {
+      'textFont':[ 'Outfit', 'sans-serif'],
+    },
     extend: {},
     colors: {
       
@@ -16,10 +20,18 @@ module.exports = {
       'footerblue': '#024f63',
       "buttonblue":"#406dff",
       'bgblue':"#f6f8fa",
-      'errorRed':"#f14c4c"
+      'errorRed':"#f14c4c",
+
+      //new colors
+      'textmain': '#6C0345',
+      'texthover': '#A34343',
+      'bgmain': '#F6F5F2',
+      'footermain': '#8B322C',
     },
   },
   plugins: [
-    require('flowbite/plugin')
+    require('flowbite/plugin'),
   ],
 }
+
+

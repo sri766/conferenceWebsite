@@ -24,9 +24,9 @@ const SubmissionForm = () => {
 
 
 
-//     const [name, setName] = useState('');
-//   const [email, setEmail] = useState('');
-//   const [attachment, setAttachment] = useState(null);
+// const [name, setName] = useState('');
+// const [email, setEmail] = useState('');
+// const [attachment, setAttachment] = useState(null);
 
 
 
@@ -53,9 +53,11 @@ const SubmissionForm = () => {
 //       alert(error);
 //     });
 //   }
+
+
   return (
-    <div className="shadow drop-shadow-sm bg-white p-8 mt-16    rounded-lg">
-    <h2 className='text-4xl text-footerblue font-semibold text-center mb-4'>
+    <div className="shadow drop-shadow-sm bg-white p-8 mt-20 font-textFont rounded-lg">
+    <h2 className='text-4xl text-textmain font-semibold text-center mb-4'>
    Submission </h2>
     <form className="" ref={form} onSubmit={sendEmail} >
     <div className="lg:flex justify-between sm:flex-col">
@@ -227,7 +229,7 @@ const SubmissionForm = () => {
 <div className='d-flex justify-center align-middle'>
 <button
       type="submit"
-      className="  rounded-lg  bg-footerblue text-white ring-2 ring-footerblue  px-5 py-2.5 text-center text-sm font-medium   hover:ring-4 hover:text-black focus:outline-none focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900"
+      className="  rounded-lg  bg-textmain text-white ring-2 ring-textmain  px-5 py-2.5 text-center text-sm font-medium   hover:ring-4 hover:text-black focus:outline-none focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900"
     >Submit</button>
     </div>
     </span>

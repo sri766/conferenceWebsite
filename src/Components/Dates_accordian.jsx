@@ -3,7 +3,7 @@ import { Card,Accordion } from 'flowbite-react'
 
 
 
-const AnnouncementsAccordion = (props) => {
+const DateAccordian = (props) => {
   let announcements=[...props.announcements];
   let maxOfAll=props.maxlength+2;
   
@@ -21,7 +21,7 @@ const AnnouncementsAccordion = (props) => {
 <div className=""></div>
     <div className="absolute top-6 mb-4 flex items-center justify-center">
       <h5 className=" text-xl font-semibold leading-none text-textmain dark:text-white ">
-        Important Announcements
+        Important Dates
       </h5>
       
     </div>
@@ -29,8 +29,8 @@ const AnnouncementsAccordion = (props) => {
     <Accordion className='w-full' alwaysOpen={true}>
   <Accordion.Panel>
     <Accordion.Title className='text-black'>
-      Submission Date
-    </Accordion.Title>q
+        Call for Papers
+    </Accordion.Title>
     <Accordion.Content>
       <p className="mb-2  text-black">
       Submission Date Extended Till 30-09-2022
@@ -100,4 +100,4 @@ const AnnouncementsAccordion = (props) => {
   )
 }
 
-export default AnnouncementsAccordion
+export default DateAccordian

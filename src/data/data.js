@@ -30,112 +30,147 @@ export const pastIpdimsData=[
 ]
 
 
+export const Details={
+    title:"Call For Papers",
+    content:"The conference's goal is to gather scholars from all over the world to present advances in the relevant fields and to foster an environment conducive to exchanging ideas and information. This conference will also provide an ideal environment to develop new collaborations and meet experts on the fundamentals, applications, and products in the fields of Noise and Vibration control. Technical papers are solicited on the topics pertaining to the scope of the conference will include, but are not limited to, the following:"
+}
+
+export const AboutId={
+    title:"About Industrial Design Department",
+    content:"Industrial Design involves designing of products of daily life such as mobile phones, cars, home interiors, furniture, home decor, packaging and branding, and so on in such a way so that it makes the modern human life easy and more pleasurable. The field also includes designing of workplaces and tools/equipment in industries to make them safer and more user friendly. The field also includes the designing of user interfaces and digital arts such as websites, brand logos etc. The present-day academic activities of Industrial Design are very broad with this due reason. The Industrial Design department at NIT Rourkela has specialized faculties in all important areas of industrial design such as product design,ergonomics & UX/UI."
+}
+
+
 //Home Page/ImportantComponent
 export const importantDatesData=[
     {
-        title:"Last Date for submission ",
-        subtitle:"of Full length paper",
-        duedate:"15-10-2023"
-    },
-    {
-        title:"Acceptance Notification ",
+        title:"Call for Papers",
         subtitle:"",
-        duedate:"30-10-2023"
+        duedate:"20th April, 2024"
     },
     {
-        title:"Submission of Revised Paper and all those",
+        title:"Full Paper Submission Deadline ",
         subtitle:"",
-        duedate:"15-11-2023"
+        duedate:"1st June, 2024"
     },
     {
-        title:"Early Bird Registration",
-        subtitle:"till",
-        duedate:"01-12-2023"
-    },
-    {
-        title:"Conference Dates ",
+        title:"Paper Acceptance Notification",
         subtitle:"",
-        duedate:"6th & 7th DEC"
+        duedate:"20th June, 2024"
     },
+    {
+        title:"Camera-Ready Paper Submission",
+        subtitle:"",
+        duedate:"10th July, 2024"
+    },
+    {
+        title:"Final Registration Deadline",
+        subtitle:"",
+        duedate:"10th August, 2024"
+    },
+    {
+        title:"Conference Date (Hybrid Mode)",
+        subtitle:"",
+        duedate:"16th-17th August, 2024"
+    
+    }
 ]
 
 //Home Page/Important Announcements Component
 
-export const importantAnnouncements=[
+export const Topics=[
    
     {
-        content:"Manuscript submission is extended till 15/10/2023",
+        content:"Acoustics Modelling",
     },
     {
-        content:"Manuscript Submission Portel Opened",
+        content:"Underwater Acoustics",
        
     },
     {
-        content:"IPDIMS Brochure Released",
+        content:"Acoustics Metamaterial",
+    },
+    {
+        content:"Noise Control",
+    },
+    {
+        content:"Noise Barrier",
+    },
+    {
+        content:"Acoustic sensors and transducers",
+    }
+    ,{
+        content:"Experimental techniques and measurements in the field of Sound & vibration",
+    },
+    {
+        content:"Artificial Intelligence and Machine Learning"
+    },{
+        content:"Rotor Dynamics",
     }
 ]
 
 
 //Home Page/About Ipdims Component
-export const aboutIpdims={
-    title:"About IPDIMS",
-    content:"Product Design is the idea generation to commercialize the product by a systematic approach, conceptualize and evaluate ideas to create a product. The product designer’s role is to combine art, science, and technology to create new products that people can use. Their evolving role has been facilitated by digital tools that now allow designers to communicate, visualize, analyze and produce tangible ideas in a way that would have taken greater man power in the past. Smart Manufacturing is a broad category of manufacturing with the goal of optimizing concept generation, production, and product transaction. While manufacturing can be defined as the multi-phase process of creating a product out of raw materials, smart manufacturing is a subset that employs computer control and high levels of adaptability. Smart manufacturing aims to take advantage of advanced information and manufacturing technologies to enable flexibility in physical processes to address a dynamic and global market. The theme, IPDIMS discusses the current issues that are facing in industries. In this conference, a wide range of fields like Computer Science, Electronics, Electrical, Automation, Robotics, 3D Printing, Smart Manufacturing, Mechatronics, Composite Materials and many more likely to be covered in this conference. Experts from industries and academia deliver the keynote lecture at this conference."
+export const About={
+    title:"About DS-NVC 2024",
+    content:"The main objective of the conference is to bring the academician,researcher, and industry persons under an umbrella to exchange their knowledge and to enhance collaboration. Controlling noise and vibration is crucial in various industries and applications, including manufacturing, construction, transportation, and residential environments. Effective design strategies for noise and vibration control are indispensable in various industries and applications,ranging from automotive and aerospace to architectural and industrial settings; and involve a combination of engineering principles, material selection, and structural design. Noise control solutions can be passive or active. This conference is aimed at bringing energy, power electronics, and control engineers into a single platform by which they can be able to exchange their ideas."
 }
 
 //Home Page/About Host Component
-export const aboutHost={
-    title:"About Host",
-    content:"Department of Industrial Design at National Institute of Technology Rourkela was established in 2010 to flourish in the emerging areas of design fields. NIT Rourkela provides quality education in a diverse and multi-cultural environment. The mission of the institute is to become an internationally acclaimed institution of higher learning that will serve as a source of knowledge and expertise for the society and be a preferred destination for undergraduate and graduate studies."
-
+export const aboutNIT={
+    title:"About NIT Rourkela",
+    content:"NIT Rourkela is an institution of national importance with a reputation for excellence in research, consultancy, and education at the undergraduate, postgraduate, and doctoral levels. It is passionately committed to making our country a world leader in technology and science and to inculcate this commitment among all its students. Our target is to be known worldwide for our academic standards and to be counted among the best technological institutes in India in terms of innovation, entrepreneurship, and intellectual wealth creation."
 }
 
 //Home Page/Tracks Component
-export const tracksData={
-    
-    track1:{
-        title:"Track - 1",
-        subtitle:"Innovative Product Design",
-        content:[
-            "Design Aesthetics",
-            "Ergonomics Design",
-            "UX/UI Design",
-            "Human Computer Interaction",
-            "Computer Aided Design",
-            "Design for Cost & Sustainability",
-            "Design Creativity & Optimization",
-            "Design for Sustainability", ]
-    },
-    track2:{
-        title:"Track - 2",
-        subtitle:"Intelligent Manufacturing Systems",
-        content:[
-            "Artificial Intelligence in manufacturing processes",
-            "Optimization and simulation",
-            "Process planning and Scheduling",
-            "Smart Manufacturing",
-            "Virtual Manufacturing",
-            "Robotics, Mechatronics & Automation",
-            "Precision engineering and metrology",
-            "Supply Chain Management",
-            "CAD/CAM/CAE",
-             ]
-    },
-    track3:{
-        title:"Track - 3",
-        subtitle:"Advanced Materials for Product Design",
-        content:[
-            "Smart Materials and Structures",
-            "Biological Materials",
-            "Metamaterials",
-            "Building Materials",
-            "Computational Materials & Modelling",
-            "Advanced Fibre Composites",
-            "Organic and Inorganic Materials",
-            "Multi-Dimensional Materials", 
-        ]
-    },
 
-}
+
+// export const tracksData={
+    
+//     track1:{
+//         title:"Track - 1",
+//         subtitle:"Innovative Product Design",
+//         content:[
+//             "Design Aesthetics",
+//             "Ergonomics Design",
+//             "UX/UI Design",
+//             "Human Computer Interaction",
+//             "Computer Aided Design",
+//             "Design for Cost & Sustainability",
+//             "Design Creativity & Optimization",
+//             "Design for Sustainability", ]
+//     },
+//     track2:{
+//         title:"Track - 2",
+//         subtitle:"Intelligent Manufacturing Systems",
+//         content:[
+//             "Artificial Intelligence in manufacturing processes",
+//             "Optimization and simulation",
+//             "Process planning and Scheduling",
+//             "Smart Manufacturing",
+//             "Virtual Manufacturing",
+//             "Robotics, Mechatronics & Automation",
+//             "Precision engineering and metrology",
+//             "Supply Chain Management",
+//             "CAD/CAM/CAE",
+//              ]
+//     },
+//     track3:{
+//         title:"Track - 3",
+//         subtitle:"Advanced Materials for Product Design",
+//         content:[
+//             "Smart Materials and Structures",
+//             "Biological Materials",
+//             "Metamaterials",
+//             "Building Materials",
+//             "Computational Materials & Modelling",
+//             "Advanced Fibre Composites",
+//             "Organic and Inorganic Materials",
+//             "Multi-Dimensional Materials", 
+//         ]
+//     },
+
+// }
 
 
 export const footerData=[
@@ -171,10 +206,6 @@ export const footerData=[
             "National Institute of Technology, Rourkela"
         ]
     }
-    // {
-    //     title:"IPDIMS™",
-    //     year:2022
-    // }
 
 ]
 
@@ -183,44 +214,66 @@ export const footerData=[
 export const registrationFeeDetails={
     
     headRow:{
-        Category:"CATEGORY",
-        //Online:"Online (Till 10/11/22)",
-        Physical:"Registration Fee(Till 15/11/23)",
-        //LateRegistration:"Late Registration (from 10/11/22 to 20/11/22)"
+        Category:"INDIAN(INR)",
+        EarlyBird:"Early Bird",
+        LateReg:"Late Registration"
     },
     content:[
         {
         Category:"Student",
-        Physical:"6000 INR",
-        //LateRegistration:"1000 INR / 25USD per each paper"
+        EarlyBird:"Rs.3500",
+        Late:"Rs.5000"
     },
     {
-        Category:"Academician/ R&D Lab",
-        //Online:"6000 INR",
-        Physical:"8000 INR",
-        //LateRegistration:"1000 INR / 25USD per each paper"
+        Category:"Academicia",
+        EarlyBird:"Rs.5000 ",
+        Late:"Rs.7000 "
     },
 
     {
-        Category:"Industrialist ",
-        //Online:"7000 INR",
-        Physical:"10000 INR",
-        //LateRegistration:"1000 INR / 25USD per each paper"
+        Category:"Industry delegates",
+        EarlyBird:"Rs.7000 ",
+        Late:"Rs.9000 "
     },
     {
-        Category:"Attendee ",
-        //Online:"1000 INR",
-        Physical:"4000 INR",
-        //LateRegistration:"1000 INR / 25USD per each paper"
-    },
-    {
-        Category:"Foreign Delegate ",
-        //Online:"100 $",
-        Physical:"250 $",
-        //LateRegistration:"1000 INR / 25USD per each paper"
+        Category:"Accompanying person",
+        EarlyBird:"Rs.4000 ",
+        Late: "Rs.3000"
     }
     ]  
 }
+export const RegistrationForForeigners={
+    
+    headRow:{
+        Category:"FOREIGN (USD)",
+        EarlyBird:"Early Bird",
+        LateReg:"Late Registration"
+    },
+    content:[
+        {
+        Category:"Student",
+        EarlyBird:"150$",
+        Late:"200$"
+    },
+    {
+        Category:"Academicia",
+        EarlyBird:"200$",
+        Late:"250$"
+    },
+
+    {
+        Category:"Industrial Delegates",
+        EarlyBird:"250$",
+        Late:"300$"
+    },
+    {
+        Category:"Accompanying person",
+        EarlyBird:"100$",
+        Late: "150$"
+    }
+    ]  
+}
+
 
 // Registration/Note Component
 export const noteData=[
@@ -229,7 +282,7 @@ export const noteData=[
     "☑️ After the payment of Registration fees, authors are requested to fill the online registration form in order to complete the registration.",
     "☑️ Registration fee covers the full participation of conference keynote speaks, presentations during all technical sessions and participation certificate.",
     "☑️ Registration fee includes institute overhead charges and GST as per actual. There are no additional charges for paper publication.",
-    "☑️ Participants under physical mode are entitled for conference kit, local tour, refreshments, working lunch, breakfast and gala dinner.",
+    // "☑️ Participants under physical mode are entitled for conference kit, local tour, refreshments, working lunch, breakfast and gala dinner.",
 ]
 
 

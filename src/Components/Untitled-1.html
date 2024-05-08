@@ -1,0 +1,32 @@
+
+<div className="z-0 lg:ml-64 HeroCarousel "  id="HeroCarousel">
+      <HeroCarousel/>
+</div>
+
+
+<div  className=' lg:flex  my-2' >
+      <div  className='lg:w-1/3 mt-4'>
+        <Track  trackData={tracksData.track1}/>
+      </div>
+      <div ref={tracksRef} className='lg:w-1/3 mt-4 lg:my-0 lg:mx-4 '>
+        <Track  trackData={tracksData.track2}/>
+      </div>
+      <div className='lg:w-1/3 mt-4 lg:my-0'>
+        <Track  trackData={tracksData.track3}/>
+      </div>
+    </div>
+
+
+
+
+    // useEffect(() => {
+      //   const announcementsHeight = announcementsRef.current.offsetHeight;
+      //   const datesHeight=datesRef.current.offsetHeight;
+      //   const pastIpdimsHeight=pastIpdimsRef.current.offsetHeight;
+      //   const track2Height=tracksRef.current.offsetHeight;
+      //   console.log(`The height of the each  elements are ${announcementsHeight}px ${datesHeight}px & ${pastIpdimsHeight}px & ${track2Height}px `);
+      // }, []); 
+    
+      
+    
+      // console.log(pastIpdimsData.length);

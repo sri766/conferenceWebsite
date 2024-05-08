@@ -9,9 +9,6 @@ const Guidelines = () => {
   return (
     
     <div className='lg:mx-48 bg-bgblue text-justify lg:ml-64'>
-    {/* <div className=" fixed lg:w-44 lg:ml-2 lg:pl-4 rounded-xl   top-38 bg-white drop-shadow-lg z-0">
-      <Sidebar/>
-    </div> */}
     <div className=" text-lg ">
   <Card className=' sm:mx-2 drop-shadow-xl  rounded-xl my-16 bg-footerblue lg:p-10'>
   <span className=''>
@@ -21,8 +18,8 @@ const Guidelines = () => {
     
     <ul  className="my-7 space-y-5 p-4">
 
-      {submissionGuidelines.map((currentGuideline)=>(
-        <li className="flex space-x-3">
+      {submissionGuidelines.map((currentGuideline, index)=>(
+        <li className="flex space-x-3" key={index}>
         <svg
           className="h-5 w-3 shrink-0 text-black-600 dark:text-blue-500"
           fill="currentColor"
