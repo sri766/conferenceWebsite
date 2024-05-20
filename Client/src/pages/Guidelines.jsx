@@ -8,11 +8,11 @@ const Guidelines = () => {
   const policyOnPlagiarism=guidelinesPage.policyOnPlagiarism;
   return (
     
-    <div className='lg:mx-48 bg-bgblue text-justify lg:ml-64'>
+    <div className='lg:mx-48 bg-bgblue text-justify lg:ml-64 font-textFont'>
     <div className=" text-lg ">
-  <Card className=' sm:mx-2 drop-shadow-xl  rounded-xl my-16 bg-footerblue lg:p-10'>
+  <Card className=' sm:mx-2 drop-shadow-xl  rounded-xl my-16 bg-textmain lg:p-10'>
   <span className=''>
-    <h5 className="text-center drop-shadow-xl mb-4 text-3xl font-semibold text-footerblue dark:text-black self-center">
+    <h5 className="text-center drop-shadow-xl mb-4 text-3xl font-semibold text-textmain dark:text-black self-center">
       Submission Guidelines
     </h5>
     
@@ -46,7 +46,7 @@ const Guidelines = () => {
     {/* <h5 className="drop-shadow-xl mb-4 text-3xl font-semibold text-footerblue dark:text-gray-400 self-center">
     Policy on Plagiarism
     </h5> */}
-    <h5 className="text-center drop-shadow-xl mb-4 text-3xl font-semibold text-footerblue dark:text-black self-center">
+    <h5 className="text-center drop-shadow-xl mb-4 text-3xl font-semibold text-textmain dark:text-black self-center">
     Policy On Plagiarism
     </h5>
     
@@ -84,7 +84,7 @@ const Guidelines = () => {
       type="button"
       to='https://ipdims.in/submission/'
       href='https://ipdims.in/submission/'
-      className="mt-4   justify-center rounded-lg outline-footerblue  ring-2 ring-footerblue  px-5 py-2.5 text-center text-sm  text-black hover:bg-footerblue hover:text-white focus:outline-none focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 font-semibold"
+      className="mt-4   justify-center rounded-lg outline-black  ring-2 ring-black px-5 py-2.5 text-center text-sm  text-black hover:bg-textmain hover:text-white focus:outline-none focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 font-semibold"
     >
     Submit Paper     
     </button>

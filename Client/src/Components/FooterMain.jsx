@@ -44,8 +44,8 @@ const FooterMain = (props) => {
     <div className="w-full bg-footermain text-white  py- px-4 sm:flex sm:items-center sm:justify-center">
       <Footer.Copyright
         href="#"
-        by="IPDIMS™"
-        year={2022}
+        by="DV-NVC™"
+        year={2024}
         className='text-white'
       />
     </div>

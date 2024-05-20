@@ -2,8 +2,8 @@ import React from 'react'
 import { Table } from 'flowbite-react'
 const BankDetails = () => {
   return (
-    <div className='mt-16   shadow drop-shadow-sm pt-4'>
-    <h2 className='text-4xl text-footerblue font-semibold text-center mb-4'>Bank Details For Payment</h2>
+    <div className='mt-16 shadow drop-shadow-sm pt-4 font-textFont'>
+    <h2 className='text-4xl text-textmain font-semibold text-center mb-4'>Bank Details For Payment</h2>
 
     <Table striped={true} className=' lg:px-4'>
   <Table.Head className='text-xl lg:px-4'>

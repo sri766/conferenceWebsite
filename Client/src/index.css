@@ -23,3 +23,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.nav-link {
+  @apply   m-4 items-center lg:text-lg hover:no-underline text-textmain hover:text-textmain hover:ring-2 hover:ring-textmain hover:rounded-full;
+  transition: padding 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s;
+}
+
+.nav-link:hover {
+  @apply  rounded-full  text-textmain ring-2 ring-textmain;
+}

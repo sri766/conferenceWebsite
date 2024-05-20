@@ -3,7 +3,7 @@ import React from 'react'
 const Login = () => {
   return (
     <div>
-        <div className="loginCard">
+        <div className="loginCard mt-32">
             <form>
             <label for="username">
                 User Name

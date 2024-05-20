@@ -24,39 +24,39 @@ const SubmissionForm = () => {
 
 
 
-// const [name, setName] = useState('');
-// const [email, setEmail] = useState('');
-// const [attachment, setAttachment] = useState(null);
+const [name, setName] = useState('');
+const [email, setEmail] = useState('');
+const [attachment, setAttachment] = useState(null);
 
 
 
-//   const handleSubmit = (e) => {
-//     e.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-//     // Create a new FormData object and append form data
-//     const formData = new FormData();
-//     formData.append('name', name);
-//     formData.append('email', email);
-//     formData.append('attachment', attachment);
+    // Create a new FormData object and append form data
+    const formData = new FormData();
+    formData.append('name', name);
+    formData.append('email', email);
+    formData.append('attachment', attachment);
 
-//     // Send form data to server using fetch API
-//     fetch('/submitform', {
-//       method: 'POST',
-//       body: formData
-//     })
-//     .then(response => {
-//       // Handle response from server
-//       alert("submitted succesfully");
-//     })
-//     .catch(error => {
-//       // Handle error
-//       alert(error);
-//     });
-//   }
+    // Send form data to server using fetch API
+    fetch('/submitform', {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => {
+      // Handle response from server
+      alert("submitted succesfully");
+    })
+    .catch(error => {
+      // Handle error
+      alert(error);
+    });
+  }
 
 
   return (
-    <div className="shadow drop-shadow-sm bg-white p-8 mt-20 font-textFont rounded-lg">
+    <div className="shadow drop-shadow-sm bg-white p-8 mt-32 font-textFont rounded-lg">
     <h2 className='text-4xl text-textmain font-semibold text-center mb-4'>
    Submission </h2>
     <form className="" ref={form} onSubmit={sendEmail} >
@@ -155,7 +155,6 @@ const SubmissionForm = () => {
                         <FileInput id="file"  type='file'
                         helperText="Upload High Resolution Copy in pdf format " 
                         required='true' 
-                        // name="attatchment"
                          />
                 </div>
             
@@ -181,8 +180,6 @@ const SubmissionForm = () => {
                 id="papertitle"
                 type="text"
                 sizing="md"
-                // value={name}
-                // onChange={e => setName(e.target.value)}
                 required='true'
                 />
             </div>

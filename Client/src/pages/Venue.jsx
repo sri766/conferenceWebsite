@@ -13,10 +13,10 @@ import guestHouse from "../resources/nit_gst.jpg"
 
 const Venue = () => {
   return (
-    <div className='body lg:mx-48 lg:ml-64  text-justify mt-20 '>
+    <div className='body lg:mx-48 lg:ml-64 text-justify mt-32 sm:mx-10'>
         <div className="venue">
         {/* <h1>manohaoiho</h1> */}
-        <h5 className="my-8 text-4xl font-bold text-textmain font-textFont dark:text-gray-400">
+        <h5 className="my-8 lg:text-4xl sm:text-3xl font-bold text-textmain font-textFont dark:text-gray-400">
               Mechanical Sciences Building, Nit Rourkela
             </h5>
             <div className="nitrMap">
@@ -38,11 +38,11 @@ const Venue = () => {
                     </div>
                 </div>
             </div>
-            <div className="nearbyAirPorts ">
+            <div className="nearbyAirPorts">
             <h5 className="my-8 text-4xl font-bold text-textmain font-textFont dark:text-gray-400 ">
               Near By AirPorts
             </h5>
-                <div className="container lg:flex lg:w-full font-textFont">
+                <div className="container lg:flex sm:mb-2 lg:w-full lg:mb-auto font-textFont">
                     <div className="  jharsuguda drop-shadow-lg lg:w-1/3 bg-white rounded-xl ">
                         <img src={jharsugudaAirport} alt='jharsuguda airport' 
                         className='w-full lg:h-64 rounded-t-xl '>

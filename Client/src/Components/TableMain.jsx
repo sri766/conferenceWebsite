@@ -10,7 +10,7 @@ const TableMain = () => {
 
 
   return (
-    <div className='shadow drop-shadow-sm '>
+    <div className='shadow drop-shadow-sm  '>
       {/* <h2 className=' text-3xl text-textmain font-semibold text-center mb-4'>Registration Details</h2> */}
       {/* <span className='flex justify-end px-4'>*The fee includes 18% GST</span> */}
 

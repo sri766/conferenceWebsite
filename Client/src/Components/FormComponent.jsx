@@ -1,28 +1,47 @@
 import React,{useRef} from 'react'
-
 import { Label, TextInput,Select,FileInput } from 'flowbite-react'
-import emailjs from '@emailjs/browser';
+import axios from 'axios';
+
 const FormComponent = () => {
 
- const form = useRef();
+  const form = useRef();
 
-    const sendEmail = (e) => {
-      e.preventDefault();
-  
-      emailjs.sendForm('service_09mobvf', 'template_r6wrfu2', form.current, 'TUaXD6jkkAHrLi8Jx')
-        .then((result) => {
-            console.log(result.text);
-            alert("form submitted successfully");
-            
-        }, (error) => {
-            alert("failed to submit");
-        });
-    };
+  const [file,setFile] = React.useState(null);
+
+  const handleFileChange = (e) => {
+    setFile(e.target.files[0]);
+  };
+
+  const sendEmail = async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form.current);
+
+    if (file) {
+      formData.append('payment_proof', file);
+    }
+
+    for (let [key, value] of formData.entries()) {
+      console.log(`${key}: ${value}`);
+    }
+
+    try {
+      const response = await axios.post('http://localhost:4000/register', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      });
+      alert(response.data);
+    } catch (error) {
+      console.error('Error uploading file:', error.message);
+      alert('Error uploading file: ' + error.message);
+    }
+  };
 
   return (
     
-    <div className="shadow drop-shadow-sm bg-white p-8 mt-16    rounded-lg ">
-    <h2 className='text-4xl text-footerblue font-semibold text-center mb-4'>Fill Payment Details</h2>
+    <div className="shadow drop-shadow-sm bg-white p-8 mt-16 rounded-lg ">
+    <h2 className='text-4xl text-textmain font-semibold text-center mb-4'>Fill Payment Details</h2>
     <form className="" ref={form} onSubmit={sendEmail}>
     <div className="sm:flex flex-col lg:flex justify-between  ">
     <div className="flex flex-col gap-4 ">
@@ -74,7 +93,6 @@ const FormComponent = () => {
       id="paperid"
       type="tel"
       name="author_mobile"
-      // sizing="sm"
       required='true'
     />
   </div>
@@ -166,10 +184,9 @@ const FormComponent = () => {
     </div>
     <Select id="countries" required name="category"> 
             <option>Student</option>
-            <option>Acadamecian</option>
-            <option>Industrialist</option>
-
-
+            <option>Acadamecia</option>
+            <option>Industry delegtes</option>
+            <option>Accompanying person</option>
             
           </Select>
   </div>
@@ -244,8 +261,8 @@ const FormComponent = () => {
     </div>
 
 
-    <FileInput id="file" helperText="Upload High Resolution Copy " required='true' 
-      // name="attatchment"
+    <FileInput id="file" helperText="Upload High Resolution Copy" required='true' 
+      onChange={handleFileChange}
     />
   </div>
 </div>
@@ -257,7 +274,7 @@ const FormComponent = () => {
 <div className='d-flex justify-center align-middle'>
 <button
       type="submit"
-      className="  rounded-lg  bg-footerblue text-white ring-2 ring-footerblue  px-5 py-2.5 text-center text-sm font-medium   hover:ring-4 hover:text-black focus:outline-none focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900"
+      className="  rounded-lg  bg-textmain text-white ring-2 ring-textmain  px-5 py-2.5 text-center text-sm font-medium   hover:ring-4 hover:text-black focus:outline-none focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900"
     >Submit</button>
     </div>
     </span>

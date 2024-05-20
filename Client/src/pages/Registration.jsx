@@ -14,34 +14,28 @@ const Registration = (props) => {
   const scrollToBottom = () =>{ 
     window.scrollTo({ 
       top: paymentSection.current.offsetTop,
-      // top: document.documentElement.scrollHeight, 
       behavior: 'smooth'
-      /* you can also use 'auto' behaviour 
-         in place of 'smooth' */
     }); 
   }; 
 
 
 
   return (
-    <div className="lg:mx-48 lg:ml-1/2 mt-20 sm:mx-2 bg-bgblue text-justify font-textFont ">
-
-
-       {/* Button for scroll to bottm */}
+    <div className="lg:mx-48 lg:ml-1/2 mt-20 sm:mx-2 bg-bgblue text-justify font-textFont">
        <div className='flex justify-center align-middle '>
-    <button
-      type="submit"
-      onClick={scrollToBottom}
-      className=" my-8 rounded-xl drop-shadow-xl  bg-textmain font-textFont text-white ring-2 ring-textmain  px-5 py-2.5 text-center text-sm font-medium   hover:ring-4 hover:text-black focus:outline-none focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900"
-    >Click To Complete Your Registration
-    </button>
-    </div>
+        <button
+          type="submit"
+          onClick={scrollToBottom}
+          className=" my-8 rounded-xl drop-shadow-xl  bg-textmain font-textFont text-white ring-2 ring-textmain  px-5 py-2.5 text-center text-sm font-medium   hover:ring-4 hover:text-black focus:outline-none focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900"
+        >Click To Complete Your Registration
+        </button>
+      </div>
 
       <div className='text-4xl flex justify-center text-textmain py-4 font-semibold'>
         Registration Details
       </div>
 
-        <div className='flex gap-10'>
+        <div className='lg:flex lg:flex-row gap-10 sm:flex sm:flex-col '>
           <TableMain />
           <TableSub />
         </div>

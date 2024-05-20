@@ -5,16 +5,8 @@ import nitrLogo from '../resources/nitrLogo.png'
 
 const CollapsibleNav = ({isScrolled}) => {
 
-
-  console.log(isScrolled);
-  // const styleNav = isScrolled =="true"
-  //   ? "sticky top-0 z-50 shadow drop-shadow-xs hidden"
-  //   : "sticky top-0 z-50 shadow drop-shadow-xs";
-
-    
-
   return (
-    <div className={`transition-all duration-300 ease-in-out ${isScrolled ? "top-0 z-50 shadow drop-shadow-xs hidden" : "sticky top-0 z-50 shadow drop-shadow-xs"}`}>
+    <div className={`transition-all duration-300 ease-in-out ${isScrolled ? "hidden" : "sticky top-0 z-50 shadow drop-shadow-xs"}`}>
 
     <Navbar
     rounded={true}
@@ -51,15 +43,21 @@ const CollapsibleNav = ({isScrolled}) => {
         </NavLink>
       
          
-      <a
-        href="https://ipdims.in/submission/"
-        // active={true}
+        <NavLink to='/registration' style={({ isActive }) => 
+                      (isActive ? {padding:"0.05em 1em 0.09em ", boxShadow:"0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)", backgroundColor:"#6C0345", color:"white", borderRadius:"1em"} : {})} activeClassName='selected'
          className={
      ( "lg:hidden rounded-full  lg:text-lg hover:no-underline text-textmain hover:text-textmain")
   }
-      >
-        Submission
-      </a>
+        //  className='lg:text-lg hover:no-underline text-footerblue hover:text-footerblue'
+        
+        >
+          Registration
+        </NavLink>
+        
+        <NavLink to='/submission' style={({ isActive }) => 
+                      (isActive ? {padding:"0.05em 1em 0.09em ", boxShadow:"0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)", backgroundColor:"#6C0345", color:"white", borderRadius:"1em"} : {})}   className='lg:hidden lg:text-lg  hover:no-underline  text-textmain hover:text-textmain'>
+         submission
+        </NavLink>
         
         <NavLink to='/guidelines' style={({ isActive }) => 
                       (isActive ? {padding:"0.05em 1em 0.09em ", boxShadow:"0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)", backgroundColor:"#6C0345", color:"white", borderRadius:"1em"} : {})}   className='lg:hidden lg:text-lg  hover:no-underline  text-textmain hover:text-textmain'>
@@ -73,16 +71,6 @@ const CollapsibleNav = ({isScrolled}) => {
       </NavLink>
 
 
-        <NavLink to='/registration' style={({ isActive }) => 
-                      (isActive ? {padding:"0.05em 1em 0.09em ", boxShadow:"0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)", backgroundColor:"#6C0345", color:"white", borderRadius:"1em"} : {})} activeClassName='selected'
-         className={
-     ( "lg:hidden rounded-full  lg:text-lg hover:no-underline text-textmain hover:text-textmain")
-  }
-        //  className='lg:text-lg hover:no-underline text-footerblue hover:text-footerblue'
-        
-        >
-          Registration
-        </NavLink>
         <NavLink to='/venue' style={({ isActive }) => 
                       (isActive ? {padding:"0.05em 1em 0.09em ",boxShadow:"0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)", backgroundColor:"#6C0345", color:"white", borderRadius:"1em"} : {})} activeClassName='selected'
          className={

@@ -4,7 +4,7 @@ const Dot = () => {
   return (
     <div>
         <svg
-          className="h-5 w-3 shrink-0 text-black-600 dark:text-blue-500"
+          className="h-5 w-3 shrink-0 text-black-600 dark:text-textmain"
           fill="currentColor"
           viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"

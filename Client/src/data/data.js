@@ -193,16 +193,16 @@ export const footerData=[
     {
         title:"Program Convenor",
         content:[
-            "Prof. BBVL Deepak",
-            "Department of Mechanical Engineering",
+            "Prof. Mohit Lal",
+            "Department of Industrial Design",
             "National Institute of Technology, Rourkela"
         ]
     },
     {
-        title:"Program Chairman",
+        title:"Principal Coordinator",
         content:[
-            "Prof. D.R.K Parhi",
-            "Department of Mechanical Engineering",
+            "Prof. Dibya Prakash Jena",
+            "Department of Industrial Design",
             "National Institute of Technology, Rourkela"
         ]
     }

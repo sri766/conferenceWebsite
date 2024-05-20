@@ -3,17 +3,22 @@ import './App.css';
 import Home from "./pages/Home.jsx"
 import { useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+
+//pages
 import Guidelines from './pages/Guidelines';
 import Registration from './pages/Registration';
-import Committee from './pages/Committee'
-import { footerData } from './data/data';
-import CollapsibleNav from './Components/CollapsibleNav';
-import FooterMain from './Components/FooterMain';
-import PastProceedings from './pages/PastProceedings';
-import Sidebar from './Components/Sidebar';
 import Login from './pages/Login';
 import Venue from './pages/Venue';
+import Committee from './pages/Committee'
 import Submission from './pages/Submission';
+import Contact from './pages/Contact';
+
+//components
+import CollapsibleNav from './Components/CollapsibleNav';
+import Sidebar from './Components/Sidebar';
+import { footerData } from './data/data';
+import FooterMain from './Components/FooterMain';
 
 function App() {
 
@@ -26,9 +31,12 @@ function App() {
       clearTimeout(timer);
       timer = setTimeout(() => {
         const scrollTop = window.scrollY;
-        setIsScrolled(scrollTop > 300);
-        const smoothTransition = scrollTop > 290 && scrollTop < 310;
-        document.documentElement.style.transition = smoothTransition ? 'all 0.3s ease-in-out' : 'none';
+        const shouldBeScrolled = scrollTop > 30;
+        if (shouldBeScrolled !== isScrolled) {
+          setIsScrolled(shouldBeScrolled);
+          const smoothTransition = scrollTop > 29 && scrollTop < 31;
+          document.documentElement.style.transition = smoothTransition ? 'all 0.5s cubic-bezier(0.42, 0, 0.58, 1)' : 'none';
+        }
       }, 100); // Debounce delay
     };
 
@@ -38,7 +46,8 @@ function App() {
       window.removeEventListener('scroll', handleScroll);
       clearTimeout(timer); // Clear timeout on component unmount
     };
-  }, []);
+  }, [isScrolled]); // Listen to changes in isScrolled state
+
   
 
 
@@ -57,13 +66,13 @@ function App() {
             </div>
               <Routes>
                 <Route path='/' element={<Home />} />
-                <Route path='/guidelines' element={<Guidelines />} />
                 <Route path='/registration' element={<Registration />} />
                 <Route path='/submission' element={<Submission/>} />
+                <Route path='/guidelines' element={<Guidelines />} />
                 <Route path='/committee' element={<Committee />} />
-                <Route path='/pastProceedings' element={<PastProceedings/>}/>
-                <Route path='/login' element={<Login/>}/>
                 <Route path='/venue' element={<Venue/>}/>
+                <Route path='/contact' element={<Contact/>}/>
+                <Route path='/login' element={<Login/>}/>
               </Routes>
             </BrowserRouter>
             </div>

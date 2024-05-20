@@ -1,5 +1,4 @@
 import React,{useRef,useState} from 'react'
-import HeroCarousel from '../Components/HeroCarousel'
 import ImportantDates from '../Components/Dates'
 import Body from '../Components/Body'
 import Host from '../Components/Host'
@@ -30,12 +29,9 @@ const Home = () => {
 
   return (
     <div className=" bg-bgmain">
-        <div className="z-0 pt-24 m-10 HeroCarousel "  id="HeroCarousel">
-          <HeroCarousel/>
-        </div>
       <div className=" my-2 ">
       
-        <div className=" bodyContainer lg:m-20 lg:p-10 ">
+        <div className=" bodyContainer lg:m-20 lg:p-10 sm:m-20">
       
           <div className=" text-justify">
             <Body about={About}/>
