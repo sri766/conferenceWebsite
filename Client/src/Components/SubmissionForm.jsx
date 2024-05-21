@@ -1,65 +1,51 @@
 import React,{useState,useRef} from 'react'
 import { Label, TextInput,Select,FileInput,Button } from 'flowbite-react'
 import axios from 'axios';
-import emailjs from '@emailjs/browser';
-
 
 
 
 const SubmissionForm = () => {
     const form = useRef();
+    const [attachment, setAttachment] = useState(null);
 
-    const sendEmail = (e) => {
-      e.preventDefault();
-  
-      emailjs.sendForm('service_09mobvf', 'template_uh8qr9a', form.current, 'TUaXD6jkkAHrLi8Jx')
-        .then((result) => {
-            console.log(result.text);
-            alert("form submitted successfully")
-        }, (error) => {
-            alert("failed to submit");
-        });
+
+
+    const handleFileChange = (e) => {
+        setAttachment(e.target.files[0]);
     };
-
-
-
-
-const [name, setName] = useState('');
-const [email, setEmail] = useState('');
-const [attachment, setAttachment] = useState(null);
-
-
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    // Create a new FormData object and append form data
-    const formData = new FormData();
-    formData.append('name', name);
-    formData.append('email', email);
-    formData.append('attachment', attachment);
-
-    // Send form data to server using fetch API
-    fetch('/submitform', {
-      method: 'POST',
-      body: formData
-    })
-    .then(response => {
-      // Handle response from server
-      alert("submitted succesfully");
-    })
-    .catch(error => {
-      // Handle error
-      alert(error);
-    });
-  }
+    
+    const sendEmail = async (e) => {
+        e.preventDefault();
+    
+        const subData = new FormData(form.current);
+    
+        if (attachment) {
+          subData.append('paper', attachment);
+        }
+    
+        for (let [key, value] of subData.entries()) {
+          console.log(`${key}: ${value}`);
+        }
+    
+        try {
+          const response = await axios.post('http://localhost:4000/submission', subData, {
+            headers: {
+              'Content-Type': 'multipart/form-data',
+            },
+          });
+          alert(response.data);
+        } catch (error) {
+          console.error('Error uploading file:', error.message);
+          alert('Error uploading file: ' + error.message);
+        }
+      };
 
 
   return (
     <div className="shadow drop-shadow-sm bg-white p-8 mt-32 font-textFont rounded-lg">
     <h2 className='text-4xl text-textmain font-semibold text-center mb-4'>
    Submission </h2>
-    <form className="" ref={form} onSubmit={sendEmail} >
+    <form className="" ref={form} onSubmit={sendEmail} autoComplete="off">
     <div className="lg:flex justify-between sm:flex-col">
         <div className="flex flex-col gap-4 ">
             
@@ -110,9 +96,7 @@ const [attachment, setAttachment] = useState(null);
                 required='true' 
                 className='outline-none border-1 border-gray-300 rounded-lg bg-gray-50 ring-0' 
                 type="email"
-                //  value={email} 
                  id="authoremail" 
-                //  onChange={e => setEmail(e.target.value)}
                  >
 
                 </input>
@@ -155,6 +139,7 @@ const [attachment, setAttachment] = useState(null);
                         <FileInput id="file"  type='file'
                         helperText="Upload High Resolution Copy in pdf format " 
                         required='true' 
+                        onChange={handleFileChange}
                          />
                 </div>
             

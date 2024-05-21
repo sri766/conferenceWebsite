@@ -42,7 +42,7 @@ const FormComponent = () => {
     
     <div className="shadow drop-shadow-sm bg-white p-8 mt-16 rounded-lg ">
     <h2 className='text-4xl text-textmain font-semibold text-center mb-4'>Fill Payment Details</h2>
-    <form className="" ref={form} onSubmit={sendEmail}>
+    <form className="" ref={form} onSubmit={sendEmail} autoComplete="off">
     <div className="sm:flex flex-col lg:flex justify-between  ">
     <div className="flex flex-col gap-4 ">
     <div>
