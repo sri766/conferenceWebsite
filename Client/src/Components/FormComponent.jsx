@@ -3,7 +3,12 @@ import { Label, TextInput,Select,FileInput } from 'flowbite-react'
 import axios from 'axios';
 
 const FormComponent = () => {
+  
+  const server_url =  process.env.SERVER_API_URL || `https://server-dsnvc-tab73.ondigitalocean.app/`
+  console.log(server_url)
 
+  const url = `${server_url}register`;
+  console.log(url);
   const form = useRef();
 
   const [file,setFile] = React.useState(null);
@@ -25,9 +30,9 @@ const FormComponent = () => {
       console.log(`${key}: ${value}`);
     }
 
-    const server_url =  process.env.SERVER_API_URL
+    
     try {
-      const response = await axios.post(`${server_url}/register`, formData, {
+      const response = await axios.post(url, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

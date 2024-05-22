@@ -8,6 +8,11 @@ const SubmissionForm = () => {
     const form = useRef();
     const [attachment, setAttachment] = useState(null);
 
+    const server_url =  process.env.SERVER_API_URL || `https://server-dsnvc-tab73.ondigitalocean.app/`
+    console.log(server_url)
+
+    const url = `${server_url}submission`;
+    console.log(url);
 
 
     const handleFileChange = (e) => {
@@ -27,9 +32,8 @@ const SubmissionForm = () => {
           console.log(`${key}: ${value}`);
         }
     
-        const server_url =  process.env.SERVER_API_URL
         try {
-          const response = await axios.post(`${server_url}/submission`, subData, {
+          const response = await axios.post(url, subData, {
             headers: {
               'Content-Type': 'multipart/form-data',
             },
