@@ -18,6 +18,7 @@ app.use(cors({
 }));
 // Route to handle registration submission
 app.post('/register', upload.single('payment_proof'), (req, res) => {
+    res.send('Registration server')
     try {
         const formData = req.body;
         const file = req.file;
@@ -79,6 +80,8 @@ app.post('/register', upload.single('payment_proof'), (req, res) => {
 
 // Route to handle form submission 
 app.post('/submission',upload.single('paper'), (req,res)=>{
+    res.send('Submission Route')
+
 
     try{
         const subData = req.body;

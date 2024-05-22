@@ -28,7 +28,7 @@ const SubmissionForm = () => {
         }
     
         try {
-          const response = await axios.post(process.env.SERVER_API_URL + '/submission', subData, {
+          const response = await axios.post(process.env.REACT_APP_SUBMISSION_URL, subData, {
             headers: {
               'Content-Type': 'multipart/form-data',
             },
