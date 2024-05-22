@@ -25,13 +25,15 @@ const FormComponent = () => {
       console.log(`${key}: ${value}`);
     }
 
+    const server_url =  process.env.SERVER_API_URL
     try {
-      const response = await axios.post(process.env.REACT_APP_REGISTER_URL, formData, {
+      const response = await axios.post(`${server_url}/register`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
       });
       alert(response.data);
+      console.log('hi');
     } catch (error) {
       console.error('Error uploading file:', error.message);
       alert('Error uploading file: ' + error.message);
