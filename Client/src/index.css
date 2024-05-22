@@ -6,7 +6,7 @@
   @font-face {
     font-family: 'Outfit';
     font-style: normal;
-    src: url(/public/Outfit.ttf) format('ttf');
+    src: url(/public/Outfit.ttf) format('ttf'), url(/public/Outfit.woff) format('woff');
   }
 }
 
