@@ -15,6 +15,7 @@ const upload = multer({ storage });
 app.use(bodyParser.json());
 app.use(cors({
     origin: process.env.REACT_APP_API_URL,
+    methods: ['GET', 'POST']
 }));
 // Route to handle registration submission
 app.post('/register', upload.single('payment_proof'), (req, res) => {
