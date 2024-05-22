@@ -4,7 +4,7 @@ import axios from 'axios';
 
 const FormComponent = () => {
   
-  const server_url =  process.env.SERVER_API_URL || `https://64.227.151.191:4000`
+  const server_url =  process.env.SERVER_API_URL || `http://64.227.151.191:4000`
   console.log(server_url)
 
   const url = `${server_url}register`;
