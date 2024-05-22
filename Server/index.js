@@ -14,9 +14,8 @@ const upload = multer({ storage });
 // Middleware
 app.use(bodyParser.json());
 app.use(cors({
-    origin: 'http://localhost:3000'
+    origin: process.env.REACT_APP_API_URL,
 }));
-
 // Route to handle registration submission
 app.post('/register', upload.single('payment_proof'), (req, res) => {
     try {

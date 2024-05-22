@@ -1,4 +1,4 @@
-
+<!-- 
 <div className="z-0 lg:ml-64 HeroCarousel "  id="HeroCarousel">
       <HeroCarousel/>
 </div>
@@ -128,3 +128,53 @@
             console.error('Error:', error);
           });
         };
+
+
+
+
+        const sendEmail = async (e) => {
+          e.preventDefault();
+      
+          const formData = new FormData(form.current);
+      
+          if (file) {
+            formData.append('payment_proof', file);
+          }
+      
+          for (let [key, value] of formData.entries()) {
+            console.log(`${key}: ${value}`);
+          }
+          
+          // Construct email data from form fields
+          const emailContent = {
+            author_name: formData.get('author_name'),
+            author_email: formData.get('author_email'),
+            author_mobile: formData.get('author_mobile'),
+            paper_id: formData.get('paper_id'),
+            paper_title: formData.get('paper_title'),
+            organization: formData.get('organization'),
+            nationality: formData.get('nationality'),
+            category: formData.get('category'),
+            amount_paid: formData.get('amount_paid'),
+            transaction_id: formData.get('transaction_id'),
+            date_of_transaction: formData.get('date_of_transaction'),
+            proof_of_payment: file
+          };
+      
+          const fromEmail = formData.get('author_email');
+          const toEmail = 'srisanthseth28@gmail.com';
+      
+          const access_token = process.env.REACT_APP_SECRET_ACCESS_TOKEN;
+        
+          try {
+            await axios.post(`https://www.googleapis.com/upload/gmail/v1/users/me/messages/send?access_token=${access_token}`, emailContent, {
+              headers: {
+                'Content-Type': 'multipart/related'
+              }
+            });
+            alert('Email sent successfully!');
+          } catch (error) {
+            console.error('Error sending email:', error);
+            alert('Error sending email. Please try again later.');
+          }
+        }; -->

@@ -1,5 +1,5 @@
 import React,{useState,useRef} from 'react'
-import { Label, TextInput,Select,FileInput,Button } from 'flowbite-react'
+import { Label, TextInput,FileInput } from 'flowbite-react'
 import axios from 'axios';
 
 
@@ -28,7 +28,7 @@ const SubmissionForm = () => {
         }
     
         try {
-          const response = await axios.post('http://localhost:4000/submission', subData, {
+          const response = await axios.post(process.env.SERVER_API_URL + '/submission', subData, {
             headers: {
               'Content-Type': 'multipart/form-data',
             },
