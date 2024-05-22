@@ -7,7 +7,7 @@ const FormComponent = () => {
   const [file, setFile] = useState(null);
   const [ws, setWs] = useState(null);
 
-  const server_url = process.env.SERVER_API_URL || `http://64.227.151.191:4000/`;
+  const server_url = process.env.SERVER_API_URL || `https://seashell-app-cnhk7.ondigitalocean.app/`;
   const ws_url = 'wss://sea-lion-app-gjwsl.ondigitalocean.app/';
 
   useEffect(() => {
