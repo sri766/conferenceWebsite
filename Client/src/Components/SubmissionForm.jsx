@@ -36,6 +36,7 @@ const SubmissionForm = () => {
           const response = await axios.post(url, subData, {
             headers: {
               'Content-Type': 'multipart/form-data',
+              'Allow-Control-Allow-Origin': '*'
             },
           });
           alert(response.data);

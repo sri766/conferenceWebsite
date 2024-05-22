@@ -35,6 +35,7 @@ const FormComponent = () => {
       const response = await axios.post(url, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
+          'Allow-Control-Allow-Origin': '*'
         },
       });
       alert(response.data);
