@@ -4,13 +4,35 @@ const cors = require('cors');
 const multer = require('multer');
 const nodemailer = require('nodemailer');
 const dotenv = require('dotenv');
-const app = express();
+const { WebSocketServer } = require('ws');
+const http = require('http');
 
-const config = dotenv.config('.env');
+dotenv.config('.env');
+
+const app = express();
+const server = http.createServer(app);
+
+// WebSocket server
+const wss = new WebSocketServer({ server });
+
+wss.on('connection', (ws) => {
+    console.log('New WebSocket connection');
+    
+    ws.on('message', (message) => {
+        console.log('Received:', message);
+        
+        // Echo the message back to the client
+        ws.send(`You said: ${message}`);
+    });
+    
+    ws.on('close', () => {
+        console.log('WebSocket connection closed');
+    });
+});
+
 // Multer configuration
 const storage = multer.memoryStorage();
 const upload = multer({ storage });
-
 
 // Middleware
 app.use(bodyParser.json());
@@ -18,9 +40,9 @@ app.use(cors({
     origin: process.env.REACT_APP_URL,
     methods: ['GET', 'POST']
 }));
+
 // Route to handle registration submission
 app.post('/register', upload.single('payment_proof'), (req, res) => {
-    res.send('Registration server')
     try {
         const formData = req.body;
         const file = req.file;
@@ -71,7 +93,7 @@ app.post('/register', upload.single('payment_proof'), (req, res) => {
                 res.status(500).send('Error sending email');
             } else {
                 console.log('Email sent:', info.response);
-                res.status(200).send('Registration successfully');
+                res.status(200).send('Registration successful');
             }
         });
     } catch (error) {
@@ -81,11 +103,8 @@ app.post('/register', upload.single('payment_proof'), (req, res) => {
 });
 
 // Route to handle form submission 
-app.post('/submission',upload.single('paper'), (req,res)=>{
-    res.send('Submission Route')
-
-
-    try{
+app.post('/submission', upload.single('paper'), (req, res) => {
+    try {
         const subData = req.body;
         const attachment = req.file;
 
@@ -103,7 +122,7 @@ app.post('/submission',upload.single('paper'), (req,res)=>{
             host: 'smtp.gmail.com',
             port: 587,
             secure: false,
-            auth:{
+            auth: {
                 user: '2024nationalconfernece@gmail.com',
                 pass: 'npef dmbr kqmf awdn'
             },
@@ -123,24 +142,22 @@ app.post('/submission',upload.single('paper'), (req,res)=>{
         console.log('Sending email...');
         console.log('Email content:', emailContent);
 
-
         transporter.sendMail(mailOptions, (error, info) => {
             if (error) {
                 console.error('Error sending email:', error);
                 res.status(500).send('Error sending email');
             } else {
                 console.log('Email sent:', info.response);
-                res.status(200).send('Submission successfully');
+                res.status(200).send('Submission successful');
             }
         });
-    }catch{
+    } catch (error) {
         console.error('Error submitting form:', error);
         res.status(500).send('Error submitting form');
     }
-
-})
+});
 
 const PORT = process.env.PORT || 4000;
-app.listen(PORT, () => {
+server.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
