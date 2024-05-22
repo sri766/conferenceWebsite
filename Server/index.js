@@ -44,8 +44,8 @@ app.post('/register', upload.single('payment_proof'), (req, res) => {
             port: 587,
             secure: false, 
             auth: {
-                user: 'srisanthseth28@gmail.com', 
-                pass: 'nxgg yuyj aqyd wbsm'   
+                user: '2024nationalconference@gmail.com', 
+                pass: 'npef dmbr kqmf awdn'   
             },
             tls: {
                 rejectUnauthorized: false
@@ -54,7 +54,7 @@ app.post('/register', upload.single('payment_proof'), (req, res) => {
 
         const mailOptions = {
             from: formData.author_email,
-            to: 'srisanthseth28@gmail.com', 
+            to: '2024nationalconference@gmail.com', 
             subject: 'New DV-NVC Registration',
             text: emailContent,
             attachments: file ? [{ filename: file.originalname, content: file.buffer }] : []
@@ -104,8 +104,8 @@ app.post('/submission',upload.single('paper'), (req,res)=>{
             port: 587,
             secure: false,
             auth:{
-                user: 'srisanthseth28@gmail.com',
-                pass: 'nxgg yuyj aqyd wbsm'
+                user: '2024nationalconfernece@gmail.com',
+                pass: 'npef dmbr kqmf awdn'
             },
             tls: {
                 rejectUnauthorized: false
@@ -114,7 +114,7 @@ app.post('/submission',upload.single('paper'), (req,res)=>{
 
         const mailOptions = {
             from: subData.author_email,
-            to: 'srisanthseth28@gmail.com',
+            to: '2024nationalconfernece@gmail.com',
             subject: 'New DV-NVC Submission',
             text: emailContent,
             attachments: attachment ? [{ filename: attachment.originalname, content: attachment.buffer }] : []
