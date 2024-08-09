@@ -3,11 +3,8 @@ import {React,useRef} from 'react'
 import TableMain from '../Components/TableMain'
 import TableSub from '../Components/TableSub'
 import BankDetails from '../Components/BankDetails'
-import FormComponent from '../Components/FormComponent'
 import {noteData} from '../data/data'
-import SubmissionForm from '../Components/SubmissionForm'
-
-
+import { useNavigate } from 'react-router-dom'
 
 const Registration = (props) => {
   const paymentSection = useRef(null);
@@ -17,6 +14,8 @@ const Registration = (props) => {
       behavior: 'smooth'
     }); 
   }; 
+
+  const navigate = useNavigate();
 
 
 
@@ -61,10 +60,18 @@ const Registration = (props) => {
         <div className="" ref={paymentSection}>
           
         </div>
-        <div className='   bg-bgblue  rounded-lg' >
-          <FormComponent/>
+
+        <div className=' justify-center items-center flex flex-col mt-16 shadow-lg drop-shadow-sm pt-4 font-textFont bg-white rounded-lg' >
+          <h2 className='m-2 p-2 text-2xl text-textmain font-semibold text-center mb-4'>NOTE: <span className='text-xl font-normal text-black'>The payment must be in the above given details before submitting this Form And Transaction Proof(*pdf) must be submitted at the time of submission of paper</span></h2>
+          <div className='m-2 p-2'>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfODUBlP9dJpzrI4KBWIWYAfBNaQCAKFZ0RzZ4astwlEyeNiQ/viewform?embedded=true" width="640" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+          </div>
+          <button
+          onClick={()=>navigate('/submission')}
+          className=" my-8 rounded-xl drop-shadow-xl  bg-textmain font-textFont text-white ring-2 ring-textmain  px-5 py-2.5 text-center text-sm font-medium   hover:ring-4 hover:text-black"
+        >Click Here after Completing Your Registration
+        </button>
         </div>
-        
         
     </div>
   )

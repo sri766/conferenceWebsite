@@ -27,6 +27,7 @@ module.exports = {
       'texthover': '#A34343',
       'bgmain': '#F6F5F2',
       'footermain': '#8B322C',
+      'infinity': '#F3F4F6'
     },
   },
   plugins: [

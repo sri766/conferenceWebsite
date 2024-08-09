@@ -186,8 +186,8 @@ export const footerData=[
     {
         title:"Contact Us ",
         content:[
-            "Phone: 0661 246 2855/2514",
-            "Email: icipdims@gmail.com"
+            "Phone: 0661 246 2856",
+            "Email: 2024nationalconvention@gmail.com@gmail.com"
         ]
     },
     {
@@ -237,8 +237,8 @@ export const registrationFeeDetails={
     },
     {
         Category:"Accompanying person",
-        EarlyBird:"Rs.4000 ",
-        Late: "Rs.3000"
+        EarlyBird:"Rs.3000 ",
+        Late: "Rs.4000"
     }
     ]  
 }

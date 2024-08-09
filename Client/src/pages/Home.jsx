@@ -6,6 +6,7 @@ import {importantDatesData,About, aboutNIT, Topics, Details, AboutId } from '../
 import Announcement from '../Components/Announcements'
 import CallForPapers from '../Components/CallForPapers'
 import AboutID from '../Components/AboutID'
+import InfiniteScrollReel from '../Components/InfiniteScrollReel'
 
 const Home = () => {
 
@@ -29,10 +30,12 @@ const Home = () => {
 
   return (
     <div className=" bg-bgmain">
-      <div className=" my-2 ">
-      
-        <div className=" bodyContainer lg:m-20 lg:p-10 sm:m-20">
-      
+      <div className=" my-2  ">
+        <div className='mt-24'>
+          <InfiniteScrollReel data={importantDatesData}/>
+        </div>
+
+        <div className=" bodyContainer lg:m-8 lg:p-10 sm:m-20">
           <div className=" text-justify">
             <Body about={About}/>
           </div>
