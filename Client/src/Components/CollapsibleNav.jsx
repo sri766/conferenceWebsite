@@ -21,7 +21,7 @@ const CollapsibleNav = ({isScrolled}) => {
         alt="Flowbite Logo"
         />
       <span className="self-center whitespace-nowrap text-5xl font-semibold  text-textmain hover:no-underline"></span>
-      <NavLink to='/'  className='lg:py-2 lg:hidden    lg:text-5xl  hover:no-underline text-textmain hover:text-textmain font-bold '>
+      <NavLink to='/'  className='lg:py-2 lg:hidden  lg:text-5xl  hover:no-underline text-textmain hover:text-textmain font-bold '>
         DS-NVC
        </NavLink>
        <NavLink to='/'  className='ml-2 lg:py-2 lg:block hidden  lg:text-3xl  hover:no-underline text-textmain hover:text-textmain font-semibold mt-4'>
@@ -29,7 +29,7 @@ const CollapsibleNav = ({isScrolled}) => {
        </NavLink>
     </div>  
 
-    <div className="flex md:order-2  md:mr-2 lg:ml-16 ">
+    <div className="flex md:order-2 md:mr-2 lg:ml-16 ">
       <Navbar.Toggle />
     </div>
 

@@ -1,7 +1,6 @@
 import React from 'react'
 import { Card } from 'flowbite-react'
-import { FaPhoneAlt } from "react-icons/fa";
-import { MdOutlineMail } from "react-icons/md";
+import { Mail, Phone} from 'lucide-react';
 
 const Contact = () => {
   return (
@@ -14,21 +13,21 @@ const Contact = () => {
             <div className="mx-auto flex gap-10">
               <p className='font-semibold text-lg mb-10 flex flex-col gap-2 justify-center align-items-center'>
                 <span className='font-semibold text-xl'>Dr Dibya Prakash Jena</span>
-                <span className='font-light text-md flex gap-2 justify-center align-items-center'>ID, Principal Coordinator</span>
-                <span className='font-normal text-lg flex gap-2 justify-center align-items-center'><span className=''><FaPhoneAlt /></span>+91-9938084602</span>
-                <span className='font-light text-md flex gap-2 justify-center align-items-center'><span className=''><MdOutlineMail /></span>jenad@nitrkl.ac.in</span>
+                <span className='font-light text-md flex gap-2 justify-center align-items-center'>ID, Chairman</span>
+                <span className='font-normal text-lg flex gap-2 justify-center align-items-center'><span className=''><Phone /></span>9938084602</span>
+                <span className='font-light text-md flex gap-2 justify-center align-items-center'><span className=''><Mail /></span>jenad@nitrkl.ac.in</span>
               </p>
               <p className='font-semibold text-lg mb-10 flex flex-col gap-2 justify-center align-items-center'>
                 <span className='font-semibold text-xl'>Dr Mohit Lal</span>
-                <span className='font-light text-md flex gap-2 justify-center align-items-center'>ID, Convener</span>
-                <span className='font-normal text-lg flex gap-2 justify-center align-items-center'><span className=''><FaPhoneAlt /></span>+91-7415189453</span>
-                <span className='font-light text-md flex gap-2 justify-center align-items-center'><span className=''><MdOutlineMail /></span>lalm@nitrkl.ac.in</span>
+                <span className='font-light text-md flex gap-2 justify-center align-items-center'>ID, Principal Coodinator</span>
+                <span className='font-normal text-lg flex gap-2 justify-center align-items-center'><span className=''><Phone /></span>7415189453</span>
+                <span className='font-light text-md flex gap-2 justify-center align-items-center'><span className=''><Mail /></span>lalm@nitrkl.ac.in</span>
               </p>
               <p className='font-semibold text-lg mb-10 flex flex-col gap-2 justify-center align-items-center'>
-                <span className='font-semibold text-xl'>Dr. Ajit Behera</span>
-                <span className='font-light text-md flex gap-2 justify-center align-items-center'>MM, Convener</span>
-                <span className='font-normal text-lg flex gap-2 justify-center align-items-center'><span className=''><FaPhoneAlt /></span>+91-99383 83765</span>
-                <span className='font-light text-md flex gap-2 justify-center align-items-center'><span className=''><MdOutlineMail /></span>beheraajit@nitrkl.ac.in</span>
+                <span className='font-semibold text-xl'>Dr. B.B.V.L Deepak</span>
+                <span className='font-light text-md flex gap-2 justify-center align-items-center'>ID, Coodinator</span>
+                <span className='font-normal text-lg flex gap-2 justify-center align-items-center'><span className=''><Phone /></span>0661-246 2855</span>
+                <span className='font-light text-md flex gap-2 justify-center align-items-center'><span className=''><Mail /></span>bbv@nitrkl.ac.in</span>
               </p>
             </div>
           </Card>

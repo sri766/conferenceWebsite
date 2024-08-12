@@ -31,10 +31,10 @@ function App() {
       clearTimeout(timer);
       timer = setTimeout(() => {
         const scrollTop = window.scrollY;
-        const shouldBeScrolled = scrollTop > 30;
+        const shouldBeScrolled = scrollTop > 18;
         if (shouldBeScrolled !== isScrolled) {
           setIsScrolled(shouldBeScrolled);
-          const smoothTransition = scrollTop > 29 && scrollTop < 31;
+          const smoothTransition = scrollTop > 19 && scrollTop < 21;
           document.documentElement.style.transition = smoothTransition ? 'all 0.5s cubic-bezier(0.42, 0, 0.58, 1)' : 'none';
         }
       }, 100); // Debounce delay

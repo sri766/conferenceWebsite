@@ -3,7 +3,10 @@ import React from 'react'
 import { Card } from 'flowbite-react'
 import { guidelinesPage } from '../data/data'
 import Sidebar from '../Components/Sidebar'
+import { useNavigate } from 'react-router-dom'
 const Guidelines = () => {
+  const navigate = useNavigate();
+
   const submissionGuidelines=guidelinesPage.submissionGuidelines;
   const policyOnPlagiarism=guidelinesPage.policyOnPlagiarism;
   return (
@@ -78,18 +81,15 @@ const Guidelines = () => {
 
       
     </ul>
-    <a href='https://ipdims.in/submission/'>
+
     <div className='d-flex justify-center align-middle'>
     <button
-      type="button"
-      to='https://ipdims.in/submission/'
-      href='https://ipdims.in/submission/'
+      onClick={()=> navigate('/submission')}
       className="mt-4   justify-center rounded-lg outline-black  ring-2 ring-black px-5 py-2.5 text-center text-sm  text-black hover:bg-textmain hover:text-white focus:outline-none focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 font-semibold"
     >
     Submit Paper     
     </button>
     </div>
-    </a>
     </span>
   </Card>
 </div>   

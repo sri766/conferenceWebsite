@@ -1,6 +1,7 @@
 import React from 'react'
 import { Card } from 'flowbite-react'
 import brochure from "../resources/brochure.pdf"
+import { Link, Link2 } from 'lucide-react';
 
 
 const Announcement = (props) => {
@@ -26,33 +27,31 @@ const Announcement = (props) => {
         
       </div>
     <div className="flow-root">
-      <ul className="">
+      <ul className="grid grid-cols-1 sm:grid-cols-2 gap-1">
         
-        {announcements.map((announcement,index)=>
-        
-        <li key={index} className="py-1 sm:py-2">
-        
-          <div className="flex items-center space-x-4">
-            <div className="min-w-0 top-5 font-textFont">
-              <p className="truncate text-lg font-medium  text-gray-900 dark:text-white ">
-              {announcement.content}
+      {announcements.map((announcement) => (
+        <li key={announcement.id} className="py-2">
+          <div className="flex items-center space-x-2">
+            <div className="min-w-0 top-2 font-textFont">
+              <p className="truncate text-md font-medium text-gray-900 dark:text-white" title={announcement.content}>
+                {announcement.content}
               </p>
             </div>
           </div>
         </li>
-        )}
+      ))}
         <li>
-        <div className="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+        <div className="inline-flex p-2 items-center text-base font-semibold text-gray-900 dark:text-white">
               <a href='http://localhost:3000/submission' className=" inline-flex items-center hover:underline">
                   Click here to submit
-                <svg className="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path><path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path></svg>
+                <Link2 size={18}/>
               </a>
             </div>
        
         <div className="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
               <a href={brochure} target='_blank' className=" inline-flex items-center font-textFont hover:underline">
                   Download Brochure
-                <svg className="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path><path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path></svg>
+                <Link size={18}/>
               </a>
             </div>
        </li>

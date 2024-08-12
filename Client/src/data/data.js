@@ -1,33 +1,33 @@
 
 
 //Home Page/Past IPDIMS Card Component
-export const pastIpdimsData=[
-    {
-        title:"1st IPDIMS 2019",
-        //subtitle:"email@windster.com",
-        href:"https://link.springer.com/book/10.1007/978-981-15-2696-1"
-    },
-    {
-        title:"2nd IPDIMS 2020",
-        subtitle:"Vol-1",
-        href:"https://link.springer.com/book/10.1007/978-981-15-9853-1"
-    },
-    {
-        title:"2nd IPDIMS 2020",
-        subtitle:"Vol-2",
-        href:"https://link.springer.com/book/10.1007/978-981-19-0296-3"
-    },
-    {
-        title:"3rd IPDIMS 2021",
-        //subtitle:"email@windster.com",
-        href:"https://link.springer.com/book/10.1007/978-981-19-4606-6"
-    },
-    {
-        title:"4th IPDIMS 2022",
-        //subtitle:"email@windster.com",
-        href:"https://link.springer.com/book/10.1007/978-981-99-1665-8"
-    },
-]
+// export const pastIpdimsData=[
+//     {
+//         title:"1st IPDIMS 2019",
+//         //subtitle:"email@windster.com",
+//         href:"https://link.springer.com/book/10.1007/978-981-15-2696-1"
+//     },
+//     {
+//         title:"2nd IPDIMS 2020",
+//         subtitle:"Vol-1",
+//         href:"https://link.springer.com/book/10.1007/978-981-15-9853-1"
+//     },
+//     {
+//         title:"2nd IPDIMS 2020",
+//         subtitle:"Vol-2",
+//         href:"https://link.springer.com/book/10.1007/978-981-19-0296-3"
+//     },
+//     {
+//         title:"3rd IPDIMS 2021",
+//         //subtitle:"email@windster.com",
+//         href:"https://link.springer.com/book/10.1007/978-981-19-4606-6"
+//     },
+//     {
+//         title:"4th IPDIMS 2022",
+//         //subtitle:"email@windster.com",
+//         href:"https://link.springer.com/book/10.1007/978-981-99-1665-8"
+//     },
+// ]
 
 
 export const Details={
@@ -51,27 +51,27 @@ export const importantDatesData=[
     {
         title:"Full Paper Submission Deadline ",
         subtitle:"",
-        duedate:"1st June, 2024"
+        duedate:"20th Oct, 2024"
     },
     {
         title:"Paper Acceptance Notification",
         subtitle:"",
-        duedate:"20th June, 2024"
+        duedate:"30th Oct, 2024"
     },
     {
         title:"Camera-Ready Paper Submission",
         subtitle:"",
-        duedate:"10th July, 2024"
+        duedate:"15th Nov, 2024"
     },
     {
         title:"Final Registration Deadline",
         subtitle:"",
-        duedate:"10th August, 2024"
+        duedate:"1st Dec, 2024"
     },
     {
         title:"Conference Date (Hybrid Mode)",
         subtitle:"",
-        duedate:"16th-17th August, 2024"
+        duedate:"6th-7th Dec, 2024"
     
     }
 ]
@@ -79,13 +79,23 @@ export const importantDatesData=[
 //Home Page/Important Announcements Component
 
 export const Topics=[
-   
+    
+    {
+        content: "Design Strategies"
+    },{
+        content: "Design Methodologies"
+    },{
+        content: "Product Design"
+    },{
+        content: "Egornomics interventions" 
+    },{
+        content: "Work and Place Acoustics"
+    },
     {
         content:"Acoustics Modelling",
     },
     {
         content:"Underwater Acoustics",
-       
     },
     {
         content:"Acoustics Metamaterial",
@@ -107,6 +117,7 @@ export const Topics=[
     },{
         content:"Rotor Dynamics",
     }
+
 ]
 
 
@@ -187,7 +198,7 @@ export const footerData=[
         title:"Contact Us ",
         content:[
             "Phone: 0661 246 2856",
-            "Email: 2024nationalconvention@gmail.com@gmail.com"
+            "Email: 2024nationalconvention@gmail.com"
         ]
     },
     {

@@ -34,7 +34,11 @@ const Registration = (props) => {
         Registration Details
       </div>
 
-        <div className='lg:flex lg:flex-row gap-10 sm:flex sm:flex-col '>
+      <div className='text-6xl absolute mx-auto text-center flex justify-center text-textmain py-4 font-normal'>
+        Registration Will Open Soon....
+      </div>
+
+        <div className='lg:flex lg:flex-row gap-10 sm:flex sm:flex-col opacity-10'>
           <TableMain />
           <TableSub />
         </div>
