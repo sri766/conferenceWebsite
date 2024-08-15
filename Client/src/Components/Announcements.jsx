@@ -15,6 +15,11 @@ const Announcement = (props) => {
       maxOfAll--;
   }
   console.log(props.announcements);
+
+
+
+  const url = process.env.REACT_APP_URL || `https://sea-lion-app-gjwsl.ondigitalocean.app/`;
+
   return (
     <div className="">
         <div className="">
@@ -41,19 +46,25 @@ const Announcement = (props) => {
         </li>
       ))}
         <li>
+<<<<<<< HEAD
         <div className="inline-flex p-2 items-center text-base font-semibold text-gray-900 dark:text-white">
               <a href='http://localhost:3000/submission' className=" inline-flex items-center hover:underline">
+=======
+          
+        <div className="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+              <a href={`${url}submission`} className=" inline-flex items-center hover:underline">
+>>>>>>> refs/remotes/origin/main
                   Click here to submit
                 <Link2 size={18}/>
               </a>
             </div>
        
-        <div className="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+        {/* <div className="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
               <a href={brochure} target='_blank' className=" inline-flex items-center font-textFont hover:underline">
                   Download Brochure
                 <Link size={18}/>
               </a>
-            </div>
+            </div> */}
        </li>
       </ul>
     </div>
