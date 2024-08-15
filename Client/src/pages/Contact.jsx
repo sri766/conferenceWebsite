@@ -12,13 +12,13 @@ const Contact = () => {
             </h5>
             <div className="mx-auto flex gap-10">
               <p className='font-semibold text-lg mb-10 flex flex-col gap-2 justify-center align-items-center'>
-                <span className='font-semibold text-xl'>Dr Dibya Prakash Jena</span>
+                <span className='font-semibold text-xl'>Dr. Dibya Prakash Jena</span>
                 <span className='font-light text-md flex gap-2 justify-center align-items-center'>ID, Chairman</span>
                 <span className='font-normal text-lg flex gap-2 justify-center align-items-center'><span className=''><Phone /></span>9938084602</span>
                 <span className='font-light text-md flex gap-2 justify-center align-items-center'><span className=''><Mail /></span>jenad@nitrkl.ac.in</span>
               </p>
               <p className='font-semibold text-lg mb-10 flex flex-col gap-2 justify-center align-items-center'>
-                <span className='font-semibold text-xl'>Dr Mohit Lal</span>
+                <span className='font-semibold text-xl'>Dr. Mohit Lal</span>
                 <span className='font-light text-md flex gap-2 justify-center align-items-center'>ID, Principal Coodinator</span>
                 <span className='font-normal text-lg flex gap-2 justify-center align-items-center'><span className=''><Phone /></span>7415189453</span>
                 <span className='font-light text-md flex gap-2 justify-center align-items-center'><span className=''><Mail /></span>lalm@nitrkl.ac.in</span>

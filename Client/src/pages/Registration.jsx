@@ -5,6 +5,7 @@ import TableSub from '../Components/TableSub'
 import BankDetails from '../Components/BankDetails'
 import {noteData} from '../data/data'
 import { useNavigate } from 'react-router-dom'
+import { Loader, Sparkle } from 'lucide-react'
 
 const Registration = (props) => {
   const paymentSection = useRef(null);
@@ -20,7 +21,7 @@ const Registration = (props) => {
 
 
   return (
-    <div className="lg:mx-48 lg:ml-1/2 mt-20 sm:mx-2 bg-bgblue text-justify font-textFont">
+    <div className="lg:mx-48 relative lg:ml-1/2 mt-20 sm:mx-2 bg-bgblue text-justify font-textFont">
        <div className='flex justify-center align-middle '>
         <button
           type="submit"
@@ -34,8 +35,8 @@ const Registration = (props) => {
         Registration Details
       </div>
 
-      <div className='text-6xl absolute mx-auto text-center flex justify-center text-textmain py-4 font-normal'>
-        Registration Will Open Soon....
+      <div className='text-5xl absolute top-80 text-center w-full text-textmain py-4 font-light'>
+        Registration Will Open Soon<Sparkle className='inline' size={24}/>
       </div>
 
         <div className='lg:flex lg:flex-row gap-10 sm:flex sm:flex-col opacity-10'>

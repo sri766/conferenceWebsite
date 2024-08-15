@@ -30,8 +30,8 @@ const Home = () => {
 
   return (
     <div className=" bg-bgmain">
-      <div className=" my-2  ">
-        <div className='mt-24'>
+      <div className=" my-2 ">
+        <div className='mt-20'>
           <InfiniteScrollReel data={importantDatesData}/>
         </div>
 

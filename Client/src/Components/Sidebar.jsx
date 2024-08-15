@@ -4,7 +4,7 @@ const Sidebar = () => {
 
   return (
     <div className='bg-white w-full ' id="sidebar">
-        <ul className='w-full flex justify-around flex-row my-2 p-1 font-textFont'>
+        <ul className='w-full flex justify-around flex-row p-1 font-textFont'>
         <NavLink
         
          to='/' style={({ isActive }) => 

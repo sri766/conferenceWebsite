@@ -89,7 +89,7 @@ export const Topics=[
     },{
         content: "Egornomics interventions" 
     },{
-        content: "Work and Place Acoustics"
+        content: "Work-Place Acoustics"
     },
     {
         content:"Acoustics Modelling",
